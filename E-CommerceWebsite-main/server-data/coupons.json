@@ -1,0 +1,28 @@
+{
+  "coupons": [
+    {
+      "code": "WELCOME10",
+      "description": "10% off on your order (max Rs 200)",
+      "type": "percent",
+      "value": 10,
+      "maxDiscount": 200,
+      "minOrder": 499,
+      "expiresAt": "",
+      "usageLimit": 0,
+      "perUserLimit": 1,
+      "active": true
+    },
+    {
+      "code": "FLAT100",
+      "description": "Flat Rs 100 off on orders above Rs 999",
+      "type": "flat",
+      "value": 100,
+      "maxDiscount": 0,
+      "minOrder": 999,
+      "expiresAt": "",
+      "usageLimit": 0,
+      "perUserLimit": 1,
+      "active": true
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<div id="mainContainer">
+        <h2 class="sectionHead" id="shopByCategory">Shop by category</h2>
+        <section class="shopByCategory" aria-label="Shop by category">
+            <a class="catBanner" href="fashion-gallery.html"><span>Fashion Gallery</span><small>Pants, shirts and t-shirts</small></a>
+            <a class="catBanner kids" href="kids-fashion.html"><span>Kids Fashion</span><small>Boys and girls</small></a>
+        </section>
+        <nav class="catTiles" aria-label="Browse by type">
+            <a href="fashion-gallery.html?type=pant"><span class="ct" aria-hidden="true">👖</span><b>Men's Pants</b></a>
+            <a href="fashion-gallery.html?type=shirt"><span class="ct" aria-hidden="true">👔</span><b>Men's Shirts</b></a>
+            <a href="fashion-gallery.html?type=tshirt"><span class="ct" aria-hidden="true">👕</span><b>Men's T-shirts</b></a>
+            <a href="kids-fashion.html?group=boys"><span class="ct" aria-hidden="true">👦</span><b>Boys</b></a>
+            <a href="kids-fashion.html?group=girls"><span class="ct" aria-hidden="true">👧</span><b>Girls</b></a>
+        </nav>
+        <h2 class="sectionHead" id="shopByBrand">Shop by brand</h2>
+        <div class="brandTiles" id="brandTiles" aria-label="Shop by brand"></div>
+        <section class="shopControls" aria-label="Product search and filters">
+            <div class="controlRow"><input id="productSearch" type="search" placeholder="Search products, brands..." aria-label="Search products">
+            <select id="brandFilter" aria-label="Filter by brand"><option value="all">All brands</option></select>
+            <input id="minPrice" type="number" min="0" placeholder="Min price" aria-label="Minimum price">
+            <input id="maxPrice" type="number" min="0" placeholder="Max price" aria-label="Maximum price">
+            <select id="sortProducts"><option value="default">Sort: Default</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option><option value="name">Name: A-Z</option></select>
+            <button id="clearFilters" type="button">Clear</button></div>
+            <div class="filterMeta"><span id="resultCount">Loading products...</span><a href="wishlist.html">♡ My Wishlist</a></div>
+        </section>
+        <div id="homeSections"><!-- JS rendered sections --></div>
+    </div>

@@ -1,0 +1,29 @@
+body{margin:0;font-family:'Lato',sans-serif;color:#1d1d1d}
+.catalogPage{padding-top:110px;min-height:70vh}
+#catalogRoot{width:90%;max-width:1300px;margin:auto;padding-bottom:50px}
+.catHead{text-align:center;padding:30px 0 10px}
+.catHead h1{margin:0;font-size:38px;letter-spacing:3px;text-transform:uppercase}
+.catHead p{margin:8px 0 0;color:#666;letter-spacing:1px}
+.catBar{display:flex;flex-direction:column;gap:12px;align-items:center;margin:20px 0 10px}
+.pillRow{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.pill{padding:9px 18px;border:1px solid #222;background:#fff;color:#222;border-radius:30px;font:inherit;font-weight:700;cursor:pointer}
+.pill.active,.pill:hover{background:#222;color:#fff}
+.groupTitle{font-size:28px;letter-spacing:2px;margin:40px 0 0;padding-bottom:8px;border-bottom:3px solid #222;text-transform:uppercase}
+.sectionTitle{font-size:20px;margin:28px 0 14px;letter-spacing:1px;text-transform:capitalize}
+.catGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:40px 20px}
+.catCard{position:relative;background:#fff;border-radius:10px;box-shadow:1px 2px 6px 2px rgb(219,219,219)}
+.catCard:hover{box-shadow:1px 6px 3px 0 rgb(185,185,185)}
+.catLink{display:block;text-decoration:none;color:inherit}
+.catLink img{width:100%;display:block;border-top-left-radius:10px;border-top-right-radius:10px}
+.catInfo{padding:0 15px 10px;text-transform:capitalize}
+.catInfo h3{font-size:16px;margin:12px 0 4px}
+.catInfo h4{font-weight:100;margin:0 0 6px}
+.catInfo h2{color:rgb(74,65,184);margin:0;font-size:20px}
+.stockStatus{margin:8px 0 0;font-size:13px;font-weight:700}
+.stockStatus.low{color:#b06b00}.stockStatus.out{color:#b00020}
+.wishlistBtn{position:absolute;right:10px;top:10px;border:0;background:#fff;border-radius:50%;width:38px;height:38px;font-size:24px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);z-index:2}
+.wishlistBtn.active{color:#e63946}
+.emptyNote,.catLoading{padding:22px;background:#f5f5f5;border-radius:8px;color:#666;text-align:center}
+@media(max-width:1070px){.catGrid{grid-template-columns:repeat(4,1fr);gap:30px 14px}}
+@media(max-width:850px){.catGrid{grid-template-columns:repeat(3,1fr)}.catalogPage{padding-top:95px}}
+@media(max-width:505px){.catGrid{grid-template-columns:repeat(2,1fr)}.catHead h1{font-size:26px}#catalogRoot{width:94%}}

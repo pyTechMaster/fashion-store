@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | BRANDON</title><link rel="icon" href="img/favicon.svg" type="image/svg+xml"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#5f56d6"><link rel="apple-touch-icon" href="img/img1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet"><script src="https://kit.fontawesome.com/4a3b1f73a2.js" crossorigin="anonymous"></script><link rel="stylesheet" href="css/header.css"><link rel="stylesheet" href="css/footer.css"><link rel="stylesheet" href="css/checkout.css"><link rel="stylesheet" href="css/theme.css"></head>
+<body class="page-checkout"><a class="skipLink" href="#main">Skip to content</a>
+<div data-include="header"></div>
+<div id="main" tabindex="-1">
+<main class="narrow checkout">
+<h1>Checkout</h1>
+<p id="checkoutMsg" class="coMsg" role="status"></p>
+<div id="coBody" hidden>
+  <section class="coBlock"><h2><i class="fas fa-shopping-cart" aria-hidden="true"></i> Order summary</h2><div id="coItems"></div><div class="couponBox"><div class="couponRow"><input id="couponInput" placeholder="Have a coupon code?" maxlength="20" autocomplete="off" aria-label="Coupon code"><button type="button" class="ghostBtn" id="couponApply">Apply</button></div><p id="couponMsg" class="couponMsg" role="status"></p></div>
+  <div id="coSubRow" class="coSub" hidden><span>Subtotal</span><b id="coSub"></b></div>
+  <div id="coDiscRow" class="coSub disc" hidden><span id="coDiscLabel">Coupon discount</span><b id="coDisc"></b></div>
+  <div class="coTotal"><span>Total</span><strong id="coTotal">Rs 0</strong></div></section>
+  <section class="coBlock"><h2><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Delivery address</h2><div id="coAddresses"></div>
+    <button type="button" class="ghostBtn" id="toggleAddr">+ Add new address</button>
+    <form id="addrForm" class="addrForm" hidden>
+      <input name="label" placeholder="Label (Home/Work)" required><input name="name" placeholder="Full name" required autocomplete="name"><input name="phone" placeholder="Phone number" required inputmode="tel" autocomplete="tel"><input name="address" placeholder="Street address" required><input name="city" placeholder="City" required><input name="state" placeholder="State" required><input name="pincode" placeholder="Pincode" required inputmode="numeric">
+      <button type="submit" class="primary">Save address</button>
+    </form>
+  </section>
+  <section class="coBlock"><h2><i class="fas fa-wallet" aria-hidden="true"></i> Payment method</h2><div id="coMethods"></div>
+    <div id="upiPanel" class="upiPanel" hidden>
+      <p class="upiAmount">Pay exactly <strong id="upiAmount"></strong></p>
+      <div class="upiGrid">
+        <div class="qrBox"><img id="upiQrImg" alt="UPI QR code" width="200" height="200"><div id="upiQrGen"></div><small>Scan with GPay, PhonePe, Paytm or any UPI app</small></div>
+        <div class="upiInfo">
+          <p class="upiRow"><span>UPI ID</span><b id="upiIdText"></b><button type="button" class="ghostBtn" id="copyUpi"><i class="fas fa-copy" aria-hidden="true"></i> Copy</button></p>
+          <a class="ghostBtn upiOpen" id="upiOpen" href="#"><i class="fas fa-mobile-alt" aria-hidden="true"></i> Open UPI app</a>
+          <label for="utr">UPI transaction ID / UTR</label>
+          <input id="utr" maxlength="25" autocomplete="off" placeholder="e.g. 412345678901">
+          <small>After paying, copy the 12-digit transaction ID from your payment app and paste it here. Your order is confirmed once we verify the payment.</small>
+        </div>
+      </div>
+    </div>
+    <div id="onlineOffPanel" class="codPanel" hidden>Online payment is not available at the moment. Please choose Cash on Delivery to place your order.</div>
+    <div id="codPanel" class="codPanel" hidden>Pay in cash to the delivery person when your order arrives.</div>
+  </section>
+  <button id="payBtn" class="primary" type="button">Place order</button>
+  <p class="legalNote">By placing your order you agree to our <a href="terms.html">Terms &amp; Conditions</a> and <a href="return-policy.html">Return &amp; Refund Policy</a>.</p>
+</div>
+<p><a href="account.html">My Account</a> · <a href="my-orders.html">My Orders</a></p>
+</main>
+</div>
+<div data-include="footer"></div>
+<script src="js/site.js"></script><script src="https://checkout.razorpay.com/v1/checkout.js"></script><script src="js/checkout.js"></script></body></html>

@@ -1,0 +1,12 @@
+{
+  "_help": "UPI details yahan hain. QR image public/img/upi-qr.png mein hai. Nayi QR/UPI ID lagani ho to yahi file aur image badlo.",
+  "cod": {
+    "enabled": true
+  },
+  "upi": {
+    "enabled": true,
+    "upiId": "9372644129@okbizaxis",
+    "payeeName": "Fashion Gallery",
+    "qrImage": "img/upi-qr.png"
+  }
+}

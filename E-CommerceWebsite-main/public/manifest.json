@@ -1,0 +1,17 @@
+{
+  "name": "BRANDON",
+  "short_name": "BRANDON",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f6f5fd",
+  "theme_color": "#5f56d6",
+  "description": "BRANDON e-commerce store",
+  "icons": [
+    {
+      "src": "img/img1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+.checkout{max-width:820px}
+.coMsg{min-height:1.4em;color:var(--bad,#B3261E);font-weight:600}
+.coBlock{margin:18px 0;padding:20px;background:#fff;border:1px solid var(--line,#dedbf1);border-radius:12px}
+.coBlock h2{margin:0 0 14px;font-size:1.15rem;display:flex;align-items:center;gap:10px}
+.coBlock h2 i{color:var(--teal,#5f56d6)}
+.coItem{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line,#dedbf1)}
+.coItem:last-child{border-bottom:0}
+.coItem small{color:var(--muted,#6a6890)}
+.coTotal{display:flex;justify-content:space-between;margin-top:12px;padding-top:12px;border-top:2px solid var(--ink,#1e1b3a);font-size:1.2rem}
+.opt{display:flex;gap:12px;align-items:flex-start;padding:14px;margin:8px 0;border:1px solid var(--line,#dedbf1);border-radius:12px;cursor:pointer;background:#fff}
+.opt:hover{border-color:var(--teal,#5f56d6)}
+.opt:has(input:checked){border-color:var(--teal,#5f56d6);background:var(--mist,#ecebfb)}
+.opt input{margin-top:5px;accent-color:#5f56d6}
+.opt i{width:22px;text-align:center;margin-top:3px;color:var(--teal,#5f56d6);font-size:1.15rem}
+.opt b{display:block}.opt span{color:var(--muted,#6a6890);font-size:.92rem}
+.page-checkout .ghostBtn{display:inline-block;padding:.55em 1em;border:1px solid var(--teal,#5f56d6);border-radius:6px;background:#fff;color:var(--teal,#5f56d6);font:600 .95rem var(--body,sans-serif);text-decoration:none;cursor:pointer}
+.page-checkout .ghostBtn:hover{background:var(--mist,#ecebfb)}
+.addrForm{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.addrForm input,#utr{padding:11px 12px;border:1px solid var(--line,#dedbf1);border-radius:6px;font:inherit;width:100%}
+.addrForm input:focus,#utr:focus{outline:none;border-color:var(--teal,#5f56d6);box-shadow:0 0 0 3px var(--mist,#ecebfb)}
+.addrForm .primary{grid-column:1/-1}
+.upiPanel,.codPanel{margin-top:14px;padding:16px;border:1px dashed var(--teal,#5f56d6);border-radius:12px;background:#fff}
+.upiAmount{margin:0 0 12px;font-size:1.1rem}
+.upiGrid{display:grid;grid-template-columns:270px 1fr;gap:20px;align-items:start}
+.qrBox{text-align:center}
+.qrBox img,.qrBox canvas,.qrBox #upiQrGen img{display:block;margin:0 auto 8px;width:200px;height:200px;object-fit:contain;border:1px solid var(--line,#dedbf1);border-radius:8px;padding:6px;background:#fff}
+.qrBox small,.upiInfo small{display:block;color:var(--muted,#6a6890);line-height:1.4}
+.upiRow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 12px}
+.upiRow span{color:var(--muted,#6a6890)}
+.upiInfo label{display:block;margin:14px 0 6px;font-weight:700}
+.upiInfo small{margin-top:8px}
+@media(hover:hover) and (pointer:fine){.upiOpen{display:none!important}}
+@media(max-width:640px){.upiGrid{grid-template-columns:1fr}.addrForm{grid-template-columns:1fr}}
+
+.qrBox img{width:100%;max-width:260px;height:auto!important;padding:0!important;border-radius:14px!important}
+
+.couponBox{margin:14px 0 4px}
+.couponRow{display:flex;gap:8px}
+.couponRow input{flex:1;min-width:0;padding:11px 14px;border:1px dashed #5f56d6;border-radius:10px;background:#f6f5fd;font:600 .95rem 'Figtree',sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.couponRow input::placeholder{text-transform:none;letter-spacing:0;font-weight:400}
+.couponRow input:disabled{background:#ecebfb;color:#4a41b8}
+.couponMsg{margin:6px 2px 0;font-size:.88rem;min-height:1.1em}
+.couponMsg.ok{color:#2f6fde}.couponMsg.err{color:#b3261e}
+.coSub{display:flex;justify-content:space-between;padding:8px 0 0;color:#6a6890;font-size:.95rem}
+.coSub.disc b{color:#2f6fde}

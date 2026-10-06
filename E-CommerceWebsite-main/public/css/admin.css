@@ -1,0 +1,13 @@
+.wrap{max-width:1100px;margin:auto;padding:32px 24px}
+.card{background:#fff;padding:18px;border:1px solid var(--line);border-radius:var(--r-m);margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.stat{font:700 2rem var(--head);color:var(--teal)}
+.muted{color:var(--muted)}
+.admin input,.wrap input,.wrap select{padding:10px;margin:5px;border:1px solid var(--line);border-radius:var(--r-s);font:inherit}
+.wrap button{padding:10px 16px;margin:5px;border:0;border-radius:var(--r-s);background:var(--teal);color:#fff;font:600 1rem var(--body);cursor:pointer}
+.table{width:100%;border-collapse:collapse}.table td,.table th{padding:9px;border-bottom:1px solid var(--line);text-align:left}
+
+.cpForm{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:8px}
+.cpForm input,.cpForm select{padding:10px 12px;border:1px solid #dedbf1;border-radius:8px;font:inherit;min-width:0}
+.card h3{margin:18px 0 4px}
+.table td button{margin:2px 4px 2px 0}

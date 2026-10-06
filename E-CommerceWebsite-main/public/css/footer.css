@@ -1,0 +1,27 @@
+.siteFooter{margin-top:72px;background:#eeebfb;color:#3b3768;border-top:1px solid #dedbf1}
+.footGrid{max-width:1320px;margin:auto;padding:48px 28px 28px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+.siteFooter .wordmark{color:#1e1b3a}.siteFooter .wordmark b{color:#5f56d6}
+.footBrand p{max-width:30ch;margin:12px 0 0;color:#6a6890}
+.webFooter{display:grid;align-content:start;gap:8px}
+.webFooter h3{margin:0 0 6px;font:700 1rem 'Bricolage Grotesque',sans-serif;color:#1e1b3a}
+.webFooter a{color:#4a4777;text-decoration:none;font-size:.95rem}
+.webFooter a:hover{color:#5f56d6;text-decoration:underline}
+.footBase{max-width:1320px;margin:auto;padding:18px 28px 28px;border-top:1px solid #dedbf1;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.85rem;color:#6a6890}
+.footBase a{color:#4a41b8}.footBase b{color:#1e1b3a}
+@media(max-width:760px){.footGrid{grid-template-columns:1fr 1fr}.footBrand{grid-column:1/-1}}
+.footContact{display:grid;gap:6px;margin-top:14px!important}
+.footContact a{color:#4a4777;text-decoration:none;font-size:.95rem;overflow-wrap:anywhere}
+.footContact a:hover{color:#5f56d6;text-decoration:underline}
+.footContact i{width:18px;margin-right:6px;color:#5f56d6}
+
+.footVisit{border-top:1px solid #dedbf1}
+.fvIn{max-width:1320px;margin:auto;padding:28px;display:grid;grid-template-columns:220px 1fr 1.6fr;gap:24px;align-items:center}
+.fvPhoto{width:100%;height:220px;object-fit:cover;object-position:top;border-radius:12px;border:1px solid #dedbf1;background:#fff}
+.fvInfo h3{margin:0 0 8px;font:700 1.1rem 'Bricolage Grotesque',sans-serif;color:#1e1b3a}
+.fvInfo p{margin:0 0 14px;color:#4a4777;line-height:1.5}
+.fvInfo i{color:#5f56d6;margin-right:6px}
+.fvBtn{display:inline-block;padding:10px 16px;border-radius:8px;background:#5f56d6;color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}
+.fvBtn:hover{background:#4a41b8}
+.fvMap{width:100%;height:220px;border:0;border-radius:12px}
+@media(max-width:860px){.fvIn{grid-template-columns:1fr}.fvPhoto{height:240px}.fvMap{height:240px}}
+.siteFooter .wordmark b{letter-spacing:.03em}

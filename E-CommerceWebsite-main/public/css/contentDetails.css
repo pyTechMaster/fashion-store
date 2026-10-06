@@ -1,0 +1,227 @@
+body
+{
+    margin: 0;
+    text-transform: capitalize;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+}
+
+#containerProduct
+{
+    padding-top: 80px;
+}
+#containerD
+{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 80px 40px;
+}
+#imageSection
+{
+    width: 80%;
+    margin: auto;
+}
+#imageSection img
+{
+    width: 100%;
+    float: right;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+}
+#imageSection img:hover
+{
+    box-shadow: 1px 0px 9px 1px rgb(95, 86, 214);
+
+}
+
+#productDetails
+{
+    width: 100%;
+}
+h1
+{
+    font-size: 35px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+h4
+{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(95, 86, 214);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+#productPreview
+{
+    padding-bottom: 10px;
+}
+#productPreview > img
+{
+    width: 50px;
+    padding: 10px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+p
+{
+    font-size: 15px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+button
+{
+    padding: 10px 15px;
+    color: white;
+    background-color: rgb(95, 86, 214);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+button a
+{
+    text-decoration: none;
+    font-size: 18px;
+}
+button:hover
+{
+    background-color: rgb(74, 65, 184);
+}
+button a:focus
+{
+    outline: none;
+}
+
+/* ----------------------------- MEDIA QUERY --------------------------- */
+
+@media(max-width: 1300px)
+{
+    h1
+    {
+        font-size: 28px;
+    }
+    #productPreview > img
+    {
+        width: 40px;
+        padding: 10px 10px;
+        padding-bottom: 30px;
+    }
+    button
+    {
+        padding: 8px 13px;
+        background-color: rgb(95, 86, 214);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 1170px)
+{
+    h1
+    {
+        font-size: 22px;
+    }
+    #productPreview > img
+    {
+        width: 40px;
+        padding: 10px 10px;
+        padding-bottom: 30px;
+    }
+    button a
+    {
+        font-size: 15px;
+
+    }
+    h4, p
+    {
+        font-size: 13px;
+    }
+    h3
+    {
+        font-size: 15px;
+    }
+
+}
+
+@media(max-width: 900px)
+{
+    /* #containerProduct */
+    #containerD
+    {
+        width: 60%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #imageSection
+    {
+        width: 100%;
+        text-align: center;
+    }
+    #imageSection img
+    {
+        text-align: center;
+        width: 70%;
+        float: none;
+    }
+    #productDetails
+    {
+        width: 100%;
+    }
+    #button
+    {
+        text-align: center;
+    }
+}
+
+@media(max-width: 650px)
+{
+    #containerD
+    {
+        width: 80%;
+    }
+}#reviewsSection{width:90%;max-width:900px;margin:30px auto;padding:22px;border-top:1px solid #ddd}#reviewsSection h2{margin-bottom:8px}.reviewSummary{font-weight:700;margin-bottom:18px}.reviewForm{}.reviewForm, #reviewForm{display:grid;gap:10px;margin-bottom:25px}#reviewForm input,#reviewForm select,#reviewForm textarea{padding:10px;border:1px solid #ccc;border-radius:6px;font:inherit}#reviewForm textarea{min-height:90px;resize:vertical}#reviewForm button{padding:11px;background:#222;color:#fff;border:0;border-radius:6px;cursor:pointer}.reviewItem{padding:14px 0;border-top:1px solid #eee}.reviewItem strong{margin-right:12px}.reviewItem span{letter-spacing:2px}.reviewItem p{margin:8px 0}.reviewItem small{color:#777}.noReviews{color:#777}
+
+#stockInfo{font-weight:700;margin:12px 0;color:#2f6fde}#stockInfo:has(+ #button){}
+
+/* ---- Ratings & reviews ---- */
+.ratingLine{display:inline-flex;align-items:center;gap:2px;margin:2px 0 10px;color:#1e1b3a;text-decoration:none;font:600 .95rem 'Figtree',sans-serif}
+.ratingLine .stars,.reviewItem .stars{color:#f5a524;letter-spacing:1px}
+.ratingLine .cnt{color:#6a6890;font-weight:500}
+.ratingLine:hover{text-decoration:underline}
+#reviewsSection{width:calc(100% - 40px);max-width:1000px;margin:24px auto;padding:26px 0;border-top:1px solid #e6e4f5;scroll-margin-top:90px}
+#reviewsSection h2{margin:0 0 16px;font:700 1.5rem 'Bricolage Grotesque',sans-serif;color:#1e1b3a}
+.rvTop{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;padding:18px;border:1px solid #e6e4f5;border-radius:16px;background:#fff}
+.rvScore{text-align:center}.rvBig{font:800 2.8rem/1 'Bricolage Grotesque',sans-serif;color:#1e1b3a}
+.rvStarsBig{color:#f5a524;font-size:1.3rem;letter-spacing:2px;margin:6px 0 2px}.rvCount{color:#6a6890;font-size:.9rem}
+.rvBars{display:grid;gap:7px}.rvBarRow{display:grid;grid-template-columns:34px 1fr 30px;gap:10px;align-items:center;font-size:.85rem;color:#6a6890}
+.rvTrack{height:8px;border-radius:99px;background:#ecebfb;overflow:hidden}.rvFill{height:100%;background:#f5a524;border-radius:99px}
+.rvN{text-align:right}
+.rvWrite{margin:18px 0;padding:18px;border:1px solid #e6e4f5;border-radius:16px;background:#f6f5fd;display:grid;gap:10px}
+.rvWrite h3{margin:0;font:700 1.1rem 'Bricolage Grotesque',sans-serif}.rvWrite p{margin:0}.rvWrite a{color:#5f56d6;font-weight:700}
+.rvVerifiedNote{color:#2f6fde;font-size:.9rem}
+.rvPick{display:flex;align-items:center;gap:4px}
+.rvStar{border:0;background:none;padding:2px;font-size:2rem;line-height:1;color:#cfcbe9;cursor:pointer;transition:transform .1s,color .1s}
+.rvStar.on{color:#f5a524}.rvStar:hover{transform:scale(1.15)}
+.rvHint{margin-left:10px;color:#6a6890;font-size:.9rem}
+.rvWrite input,.rvWrite textarea{width:100%;box-sizing:border-box;padding:11px 14px;border:1px solid #dedbf1;border-radius:10px;background:#fff;font:inherit}
+.rvActions{display:flex;gap:10px;flex-wrap:wrap}.rvActions .primary{width:auto;padding:11px 22px}
+.rvMsg{font-size:.9rem;min-height:1.1em;color:#6a6890}.rvMsg.err{color:#b3261e}
+.reviewList{display:grid;gap:0}
+.reviewItem{padding:18px 4px;border-top:1px solid #e6e4f5}.reviewItem.mineRv{background:#faf9ff}
+.rvHead{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}.rvHead time{margin-left:auto;color:#75739b;font-size:.85rem}
+.rvBadge{color:#2f6fde;font-size:.8rem;font-weight:600;background:#e8f0fd;padding:2px 8px;border-radius:99px}
+.rvTitle{margin:8px 0 2px;font-size:1rem}.rvText{margin:4px 0 0;color:#3b3768;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}
+.noReviews{color:#6a6890;padding:10px 0}
+@media(max-width:640px){.rvTop{grid-template-columns:1fr;gap:16px}}
+
+#reviewsSection .rvStar{background:none!important;border:0!important;box-shadow:none!important;width:auto!important;height:auto!important;min-width:0!important;padding:2px 3px!important;border-radius:0!important;color:#cfcbe9!important;font-size:2rem;line-height:1}
+#reviewsSection .rvStar.on{color:#f5a524!important}
+#reviewsSection .rvBadge{letter-spacing:normal!important;text-transform:none!important}
+#reviewsSection .rvActions button{width:auto}
+.ratingLine .cnt{margin-left:4px}

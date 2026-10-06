@@ -1,0 +1,4 @@
+{
+  "_help": "Kisi product ko manually kisi section me daalna ho to yaha id ke saath likho. section: men | boys | girls | kids (kids = boys aur girls dono me dikhega). type: pant | shirt | tshirt | short | dress. Example: \"3\": { \"section\": \"men\", \"type\": \"shirt\" }",
+  "overrides": {}
+}

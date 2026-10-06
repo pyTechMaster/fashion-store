@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in | BRANDON</title><link rel="icon" href="img/favicon.svg" type="image/svg+xml"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#5f56d6"><link rel="apple-touch-icon" href="img/img1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet"><script src="https://kit.fontawesome.com/4a3b1f73a2.js" crossorigin="anonymous"></script><link rel="stylesheet" href="css/header.css"><link rel="stylesheet" href="css/footer.css"><link rel="stylesheet" href="css/auth.css"><link rel="stylesheet" href="css/theme.css"></head>
+<body class="page-auth"><a class="skipLink" href="#main">Skip to content</a>
+<div data-include="header"></div>
+<div id="main" tabindex="-1">
+<main class="auth-wrap">
+  <section class="auth-card">
+    <div class="auth-tabs"><button id="tabSignIn" class="active">Sign In</button><button id="tabCreate">Create Account</button></div>
+    <div id="message" class="message"></div>
+    <form id="signInForm">
+      <h1>Welcome back</h1><p>Sign in to place orders and keep your account.</p>
+      <label>Email<input id="loginEmail" type="email" required autocomplete="email"></label>
+      <label>Password<input id="loginPassword" type="password" required autocomplete="current-password"></label>
+      <button class="primary" type="submit">Sign In</button>
+      <button class="link-btn" type="button" id="forgotBtn">Forgot password?</button>
+    </form>
+    <form id="createForm" hidden>
+      <h1>Create your account</h1><p>Create your account once. You can sign out and sign in again anytime.</p>
+      <label>Full name<input id="name" type="text" required autocomplete="name"></label>
+      <label>Email<input id="email" type="email" required autocomplete="email"></label>
+      <label>Password<input id="password" type="password" minlength="6" required autocomplete="new-password"></label>
+      <label>Confirm password<input id="confirmPassword" type="password" minlength="6" required autocomplete="new-password"></label>
+      <p class="legalNote">By creating an account you agree to our <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy.html">Privacy Policy</a>.</p><button class="primary" type="submit">Create Account</button>
+    </form>
+    <form id="forgotForm" hidden>
+      <h1>Forgot password</h1><p>Enter the email of your account. We will send a 6-digit reset code to it.</p>
+      <label>Email<input id="resetEmail" type="email" required autocomplete="email"></label>
+      <button class="primary" type="submit">Send reset code</button>
+      <button class="link-btn" type="button" id="backSignIn">Back to Sign In</button>
+    </form>
+    <form id="resetForm" hidden>
+      <h1>Set new password</h1><p>Enter the 6-digit reset code and choose a new password.</p>
+      <p><a id="resetWa" class="btnWa" target="_blank" rel="noopener">Code nahi mila? WhatsApp par maangein</a></p>
+      <label>Email<input id="resetEmail2" type="email" required autocomplete="email"></label>
+      <label>Reset code<input id="resetCode" inputmode="numeric" maxlength="6" required autocomplete="one-time-code"></label>
+      <label>New password<input id="resetPassword" type="password" minlength="6" required autocomplete="new-password"></label>
+      <button class="primary" type="submit">Set New Password</button>
+      <button class="link-btn" type="button" id="backSignIn2" onclick="show('signin')">Back to Sign In</button>
+    </form>
+    <div id="googleBox" class="googleBox" hidden><div class="orLine"><span>or</span></div><div id="googleBtn"></div></div>
+    <div id="signedIn" hidden>
+      <h1>My Account</h1><p id="welcome"></p>
+      <div class="account-actions"><button id="installBtn" class="secondary" hidden>Install BRANDON App</button><button id="notifyBtn" class="secondary">Enable Notifications</button><button id="signOutBtn" class="danger">Sign Out</button></div>
+      <div class="user-stats"><strong id="userCount">0</strong><span>registered account(s) on this browser</span></div>
+      <small>Account records in this version are stored locally in this browser. A production store should connect this to a secure database.</small>
+    </div>
+  </section>
+</main>
+</div>
+<div data-include="footer"></div>
+<script src="js/site.js"></script><script src="js/auth.js"></script></body></html>

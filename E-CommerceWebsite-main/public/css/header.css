@@ -1,0 +1,143 @@
+/* ShopLane header: announcement bar + sticky main bar + dropdown menus + mobile drawer */
+.topBar{background:#e9e7fb;color:#3b3768;border-bottom:1px solid #d4d0f3;font:500 .82rem/1 'Figtree','Segoe UI',sans-serif}
+.topBarIn{max-width:1320px;margin:auto;padding:9px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.topBar a{color:#4a41b8;text-decoration:none;font-weight:600;white-space:nowrap}
+.topBar a:hover{text-decoration:underline}
+.tbInfo,.tbShip{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.tbInfo>a,.tbAddr,.tbShip{display:inline-flex;align-items:center;gap:6px}
+.tbDot{font-style:normal;opacity:.6}
+.tbIcon{width:14px;height:14px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+.siteHeader{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e6e4f5;transition:box-shadow .2s}
+.siteHeader.scrolled{box-shadow:0 8px 24px -14px rgba(30,27,58,.35)}
+#container{max-width:1320px;margin:auto;display:flex;align-items:center;gap:26px;padding:14px 28px}
+#shopName{flex:none}
+.wordmark{display:flex;align-items:center;gap:10px;text-decoration:none;color:#1e1b3a}
+.wmText{font:500 1.7rem/1 'Bricolage Grotesque','Segoe UI',sans-serif;letter-spacing:-.04em}
+.wmText b{font-weight:800;color:#5f56d6}
+#collection{position:fixed;top:0;left:0;bottom:0;z-index:80;width:min(320px,86vw);display:flex;flex-direction:column;gap:4px;padding:76px 16px 24px;background:#fff;overflow-y:auto;transform:translateX(-102%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s;box-shadow:20px 0 40px -20px rgba(0,0,0,.35)}
+#collection.open{transform:none;visibility:visible;transition:transform .25s ease,visibility 0s}
+.navItem{position:relative}
+.navItem>a{display:flex;align-items:center;gap:6px;padding:13px 14px;border-radius:12px;color:#1e1b3a;text-decoration:none;font:600 1.02rem 'Figtree','Segoe UI',sans-serif;transition:background .15s,color .15s}
+.navItem>a .caret{font-size:.6rem;opacity:.6;transition:transform .2s}
+.navItem>a .caret{display:none}
+.navItem>a:hover,.navItem:hover>a,.navItem>a.current{background:#ecebfb;color:#4a41b8}
+.dropdown{position:static;display:grid;min-width:0;margin:0 0 6px 10px;padding:0 0 0 12px;border:0;border-left:2px solid #ecebfb;border-radius:0;box-shadow:none;grid-template-columns:1fr}
+@keyframes ddIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.dropdown a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:9px;color:#1e1b3a;text-decoration:none;font-size:.94rem;font-weight:500}
+.dropdown a i{width:18px;text-align:center;color:#5f56d6;font-size:.9rem}
+.dropdown a:hover{background:#ecebfb;color:#4a41b8}
+.ddTitle{display:none;padding:6px 12px 8px;font:700 .72rem 'Figtree',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#75739b}
+.dropdown .ddAll{margin-top:6px;border-top:1px solid #e6e4f5;border-radius:0 0 9px 9px;padding-top:12px;color:#C42B6B;font-weight:700;justify-content:space-between}
+.dropdown .ddAll i{color:inherit;font-size:.8rem}
+.dropdown .ddAll:hover{background:#FBE7EF;color:#C42B6B}
+.dropdown.twoCol{grid-template-columns:1fr 1fr;gap:6px 14px}
+.dropdown.twoCol .ddAll{grid-column:1/-1}
+.dropdown .col{display:grid;align-content:start}
+.dropdown .col b{padding:6px 12px;font:700 .72rem 'Figtree',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#75739b}
+#search{position:relative;flex:1;max-width:460px;margin-left:auto;display:flex;align-items:center}
+#search .search{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#75739b;pointer-events:none;font-size:.9rem}
+#input{width:100%;height:46px;padding:0 96px 0 42px;border:1.5px solid #e6e4f5;border-radius:999px;background:#f6f5fd;font:500 .94rem 'Figtree','Segoe UI',sans-serif;color:#1e1b3a;transition:border-color .15s,box-shadow .15s,background .15s;-webkit-appearance:none;appearance:none}
+#input::-webkit-search-cancel-button{display:none}
+#input:focus{outline:none;border-color:#5f56d6;box-shadow:0 0 0 4px #ecebfb;background:#fff}
+.searchGo{position:absolute;right:5px;top:5px;height:36px;padding:0 18px;border:0;border-radius:999px;background:#5f56d6;color:#fff;font:700 .85rem 'Figtree',sans-serif;cursor:pointer;transition:background .15s}
+.searchGo:hover{background:#4a41b8}
+#user{display:flex;gap:2px;align-items:center;flex:none}
+#user .uItem{height:46px;padding:0 12px;display:flex;align-items:center;gap:8px;border:0;border-radius:999px;background:none;color:#1e1b3a;text-decoration:none;font:600 .9rem 'Figtree','Segoe UI',sans-serif;white-space:nowrap;cursor:pointer;transition:background .15s,color .15s}
+#user .uItem:hover,#user .acct:focus-within .acctBtn,#user .acct.open .acctBtn{background:#ecebfb;color:#4a41b8}
+#user i{position:relative;font-size:1.25rem}
+.userIcon{font-size:1.3rem!important}
+#user .uItem.iconOnly{width:46px;padding:0;justify-content:center}
+.uIcon{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.uItem.iconOnly:hover .uIcon{color:#C42B6B}
+.acct{position:relative}
+.acctBtn::after{content:"";width:6px;height:6px;margin:-3px 0 0 2px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg);opacity:.6}
+.acctMenu{position:absolute;top:100%;right:0;z-index:60;min-width:260px;margin-top:8px;padding:8px;background:#fff;border:1px solid #e6e4f5;border-radius:16px;display:none;box-shadow:0 24px 48px -20px rgba(30,27,58,.4)}
+.acctMenu::before{content:"";position:absolute;left:0;right:0;top:-10px;height:10px}
+.acct:hover .acctMenu,.acct.open .acctMenu{display:grid;animation:ddIn .16s ease-out}
+.acctMenu a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;color:#1e1b3a;text-decoration:none;font-size:.94rem;font-weight:500}
+.acctMenu a[hidden]{display:none}
+.acctMenu a:hover,.acctMenu a:focus-visible{background:#ecebfb;color:#4a41b8}
+.acctMenu a i{width:20px;text-align:center;font-size:1rem;color:#5f56d6}
+#badge,#wishlistBadge{display:none!important;position:absolute;top:-9px;right:-11px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:#C42B6B;color:#fff;font:700 .68rem/18px 'Figtree',sans-serif;text-align:center;box-shadow:0 0 0 2px #fff}
+.menuBtn{display:block;flex:none;order:0;z-index:90;width:44px;height:44px;border:0;border-radius:12px;background:#f6f5fd;cursor:pointer;padding:0;position:relative}
+.menuBtn span{position:absolute;left:12px;right:12px;height:2px;border-radius:2px;background:#1e1b3a;transition:transform .2s,opacity .2s,top .2s}
+.menuBtn span:nth-child(1){top:15px}.menuBtn span:nth-child(2){top:21px}.menuBtn span:nth-child(3){top:27px}
+.menuBtn[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.menuBtn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menuBtn[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg)}
+.navScrim{display:block;position:fixed;inset:0;z-index:40;background:rgba(30,27,58,.45);opacity:0;pointer-events:none;transition:opacity .25s}
+.navScrim.open{opacity:1;pointer-events:auto}
+@media(max-width:1100px){
+ #container{gap:14px}
+ #user .uLabel{display:none}
+ #user .uItem{padding:0 11px}
+ .acctBtn::after{display:none}
+}
+@media(max-width:900px){
+ .topBarIn{padding:8px 16px;gap:10px}
+ #container{flex-wrap:wrap;gap:10px 10px;padding:10px 16px}
+ #shopName{order:1}
+ #user{order:3;margin-left:auto}
+ #search{order:4;flex:1 1 100%;max-width:none;margin:0}
+ .acctMenu{min-width:230px}
+}
+@media(max-width:700px){
+ .tbMail,.tbAddr,.tbDot{display:none}
+ .topBarIn{justify-content:space-between;font-size:.75rem}
+}
+@media(max-width:420px){
+ .tbShip{font-size:.7rem}
+ .wmText{font-size:1.45rem}
+  #input{height:44px}
+}
+
+/* ---- Left slide-out menu (hamburger) + Home link beside logo ---- */
+.homeLink{display:inline-flex;align-items:center;gap:8px;flex:none;height:42px;padding:0 14px;border-radius:999px;color:#1e1b3a;text-decoration:none;font:600 .95rem 'Figtree','Segoe UI',sans-serif;transition:background .15s,color .15s}
+.homeLink i{color:#5f56d6;font-size:.95rem}
+.homeLink:hover,.homeLink.current{background:#ecebfb;color:#4a41b8}
+#collection{z-index:100;width:min(360px,88vw);gap:0;padding:0 24px 28px;box-shadow:24px 0 48px -24px rgba(0,0,0,.4)}
+.drawerHead{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:20px 0 14px;margin-bottom:6px;background:#fff;border-bottom:1px solid #e6e4f5}
+.drawerClose{width:40px;height:40px;border:0;border-radius:50%;background:none;color:#1e1b3a;font-size:2rem;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .15s}
+.drawerClose:hover{background:#ecebfb;color:#4a41b8}
+.drawerWelcome{padding:22px 0 14px}
+.drawerWelcome .wave{display:block;font-size:1.6rem;line-height:1;margin-bottom:10px}
+.drawerWelcome h2{margin:0 0 6px;font:700 1.35rem/1.2 'Bricolage Grotesque','Segoe UI',sans-serif;color:#1e1b3a;letter-spacing:-.02em}
+.drawerWelcome p{margin:0;color:#6a6890;font-size:1rem;line-height:1.5}
+#collection .navItem{border-bottom:1px solid #e6e4f5}
+#collection .navItem[hidden]{display:none}
+#collection .navItem>a{gap:14px;padding:15px 0;border-radius:0;font-weight:500;font-size:1.05rem;background:none!important}
+#collection .navItem>a:hover,#collection .navItem>a.current{color:#5f56d6}
+#collection .navItem>a .ic{width:22px;text-align:center;font-size:1.1rem;color:#5f56d6}
+#collection .navItem>a .ic-heart{color:#C42B6B}
+.dCount{margin-left:auto;color:#6a6890;font-size:.92rem;font-weight:500}
+#collection .dropdown{margin:0 0 10px 36px;padding:0 0 0 12px}
+#collection .dropdown a{padding:8px 10px;font-size:.95rem}
+@media(max-width:900px){.homeLink{order:2;height:40px;padding:0 10px}}
+@media(max-width:600px){
+ .homeLink{height:36px;padding:0 11px;font-size:.85rem;gap:0}
+ .homeLink i{display:none}
+ #container{gap:8px 6px}
+ #user .uItem{padding:0 7px}
+ #shopName{margin-right:0}
+ #menuBtn{width:40px;height:40px}
+ #user .uItem{height:38px}
+ #user .uItem.iconOnly,.acctBtn{width:36px;min-width:36px;padding:0;justify-content:center}
+ .wmText{font-size:1.35rem}
+}
+@media(max-width:380px){.homeLink{padding:0 8px;font-size:.8rem}.wmText{font-size:1.3rem}}
+
+/* Drawer accordion: Men / Kids open on tap */
+#collection .navItem.hasSub>a{padding-right:34px}
+#collection .accCaret{position:absolute;right:6px;top:21px;width:9px;height:9px;border-right:2px solid #6a6890;border-bottom:2px solid #6a6890;transform:rotate(45deg);transition:transform .2s;pointer-events:none}
+#collection .navItem.hasSub.open .accCaret{transform:rotate(-135deg);top:25px;border-color:#5f56d6}
+#collection .navItem.hasSub>.dropdown{display:none}
+#collection .navItem.hasSub.open>.dropdown{display:grid;animation:accIn .18s ease-out}
+#collection .navItem.hasSub.open>a{color:#5f56d6}
+@keyframes accIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+/* star rating shown on product cards */
+.cardRating{display:flex;align-items:center;gap:5px;margin:2px 0 4px;font:600 .82rem 'Figtree',sans-serif;color:#1e1b3a}
+.cardRating .stars{color:#f5a524;letter-spacing:1px}.cardRating small{color:#75739b;font-weight:500}
+@media(max-width:340px){.homeLink{display:none}}
+
+.wmText{letter-spacing:.02em}.wmText b{font-weight:800;letter-spacing:.02em}
